@@ -78,12 +78,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   UART_Init();
-//  MX_USB_DEVICE_Init();
+  MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 2 */
 
-//  USB_Control_Init();
-//  USB_Control_Enable();
+  USB_Control_Init();
+  USB_Control_Enable();
 
   /* USER CODE END 2 */
 
@@ -98,7 +98,7 @@ int main(void)
   {
   /* USER CODE END WHILE */
 	  HAL_Delay(1000);
-//	  CDC_Transmit_FS(HELLO_WORLD, 13);
+	  CDC_Transmit_FS(HELLO_WORLD, 13);
   /* USER CODE BEGIN 3 */
 
   }
