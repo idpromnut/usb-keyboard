@@ -37,24 +37,29 @@ void KS_Init()
 uint16_t KS_ScanForKeyPress(uint8_t iActiveLine)
 {
 	uint32_t outputRegister = ((uint32_t)iActiveLine << 8);
-	printf("Writing 0x%04X to GPIOB: ", outputRegister);
 	GPIOB->ODR = outputRegister;
 	uint32_t scannedInput = (GPIOA->IDR & 0x000000FF) << 8;
 	scannedInput |= (GPIOC->IDR & 0x000000FF);
-	printf("read 0x%04X\n", scannedInput);
 	return scannedInput;
 }
 
 void KS_FormatScanLines(uint8_t iActiveLine, uint16_t iReadLines)
 {
-
-
 }
 
 void KS_PrintScanLines()
 {
-	uint16_t scannedLines = KS_ScanForKeyPress(0x01);
+	uint16_t scannedInput;
 
+	for(uint8_t i = 0; i < 8; ++i)
+	{
+		scannedInput = KS_ScanForKeyPress(1 << i);
+		if (scannedInput > 0)
+		{
+			// detected a key press
+			printf("Key press detected at %d/0x%04X\n", (i+1), scannedInput);
+		}
+	}
 }
 
 void KS_GpioPinInit(GPIO_TypeDef *iPort, uint32_t iPin, uint32_t iMode, uint32_t iPull, uint32_t iSpeed)
