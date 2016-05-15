@@ -36,6 +36,7 @@
 #include "usbd_cdc_if.h"
 #include "usb_ctrl.h"
 #include "uart.h"
+#include "keyscanner.h"
 #include <stdio.h>
 
 /* USER CODE BEGIN Includes */
@@ -94,11 +95,14 @@ int main(void)
 
   printf("%s", HELLO_WORLD);
 
+  KS_Init();
+
   while (1)
   {
   /* USER CODE END WHILE */
 	  HAL_Delay(1000);
-	  CDC_Transmit_FS(HELLO_WORLD, 13);
+//	  CDC_Transmit_FS(HELLO_WORLD, 13);
+	  KS_PrintScanLines();
   /* USER CODE BEGIN 3 */
 
   }
@@ -155,19 +159,11 @@ void SystemClock_Config(void)
 */
 void MX_GPIO_Init(void)
 {
-
-  GPIO_InitTypeDef GPIO_InitStruct;
-
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
