@@ -47,9 +47,10 @@ void KS_FormatScanLines(uint8_t iActiveLine, uint16_t iReadLines)
 {
 }
 
-void KS_PrintScanLines()
+uint8_t KS_PrintScanLines()
 {
 	uint16_t scannedInput;
+	uint8_t keyScans = 0;
 
 	for(uint8_t i = 0; i < 8; ++i)
 	{
@@ -58,8 +59,11 @@ void KS_PrintScanLines()
 		{
 			// detected a key press
 			printf("Key press detected at %d/0x%04X\n", (i+1), scannedInput);
+			++keyScans;
 		}
 	}
+
+	return keyScans;
 }
 
 void KS_GpioPinInit(GPIO_TypeDef *iPort, uint32_t iPin, uint32_t iMode, uint32_t iPull, uint32_t iSpeed)

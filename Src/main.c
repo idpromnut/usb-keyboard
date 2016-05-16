@@ -91,7 +91,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint8_t HELLO_WORLD[14] = "Hello World!\n";
+  uint8_t HELLO_WORLD[] = "USB Keyboard Firmware v0.1\n";
 
   printf("%s", HELLO_WORLD);
 
@@ -100,9 +100,12 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	  HAL_Delay(1000);
+	  HAL_Delay(10);
 //	  CDC_Transmit_FS(HELLO_WORLD, 13);
-	  KS_PrintScanLines();
+	  if(KS_PrintScanLines() > 0)
+	  {
+		  HAL_Delay(100);
+	  }
   /* USER CODE BEGIN 3 */
 
   }

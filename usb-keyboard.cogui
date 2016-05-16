@@ -10,53 +10,38 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
 <part id="1"/>
+<part id="0"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/dev/ibm-model-m-usb/Src/main.c" title="main.c" tooltip="C:/dev/ibm-model-m-usb/Src/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/Src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2987" selectionTopPixel="587"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.c" partName="keyscanner.c" path="C:/dev/usb-keyboard/keyscanner/keyscanner.c" title="keyscanner.c" tooltip="C:/dev/usb-keyboard/keyscanner/keyscanner.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/keyscanner/keyscanner.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2303" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.c" partName="keyscanner.c" path="C:/dev/ibm-model-m-usb/keyscanner/keyscanner.c" title="keyscanner.c" tooltip="C:/dev/ibm-model-m-usb/keyscanner/keyscanner.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/keyscanner/keyscanner.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2256" selectionTopPixel="194"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/dev/usb-keyboard/Src/main.c" title="main.c" tooltip="C:/dev/usb-keyboard/Src/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/Src/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3391" selectionTopPixel="1140"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.h" partName="keyscanner.h" path="C:/dev/ibm-model-m-usb/keyscanner/keyscanner.h" title="keyscanner.h" tooltip="C:/dev/ibm-model-m-usb/keyscanner/keyscanner.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/keyscanner/keyscanner.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="70" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f103xb.h" partName="stm32f103xb.h" path="C:/dev/ibm-model-m-usb/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" title="stm32f103xb.h" tooltip="C:/dev/ibm-model-m-usb/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26209" selectionTopPixel="10350"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_gpio.h" partName="stm32f1xx_hal_gpio.h" path="C:/dev/ibm-model-m-usb/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" title="stm32f1xx_hal_gpio.h" tooltip="C:/dev/ibm-model-m-usb/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="8370" selectionTopPixel="2130"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f103xb.s" partName="startup_stm32f103xb.s" path="C:/dev/ibm-model-m-usb/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s" title="startup_stm32f103xb.s" tooltip="C:/dev/ibm-model-m-usb/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.h" partName="keyscanner.h" path="C:/dev/usb-keyboard/keyscanner/keyscanner.h" title="keyscanner.h" tooltip="C:/dev/usb-keyboard/keyscanner/keyscanner.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/keyscanner/keyscanner.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="228" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
 <viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
-<element path="/ibm-model-m"/>
-<element path="/ibm-model-m/Inc"/>
-<element path="/ibm-model-m/keyscanner"/>
-<element path="/ibm-model-m/semihosting"/>
-<element path="/ibm-model-m/Src"/>
+<element path="/usb-keyboard"/>
+<element path="/usb-keyboard/Inc"/>
+<element path="/usb-keyboard/keymaps"/>
+<element path="/usb-keyboard/keyscanner"/>
+<element path="/usb-keyboard/Src"/>
 </expanded>
 <selection>
-<element path="/ibm-model-m/Src/usb_device.c"/>
+<element path="/usb-keyboard/keyscanner/keyscanner.h"/>
 </selection>
 </viewState>
 </view>
@@ -108,6 +93,7 @@
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -124,10 +110,12 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@15821fa" ratio="0.789424" ratioLeft="836" ratioRight="223" relationship="4" relative="org.eclipse.ui.internal.ViewStack@73221e">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.17905167" ratioLeft="253" ratioRight="1160" relationship="2" relative="org.eclipse.ui.internal.ViewStack@73221e"/>
@@ -166,38 +154,38 @@
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
-<hide_menu_item_id id="org.coocox.builder.ui.newFile"/>
 <hide_menu_item_id id="org.coocox.builder.ui.newFolder"/>
-<hide_menu_item_id id="org.coocox.builder.ui.openFile"/>
+<hide_menu_item_id id="org.coocox.welcome.ui.action.repository"/>
 <hide_menu_item_id id="org.eclipse.ui.file.save"/>
-<hide_menu_item_id id="org.eclipse.ui.file.saveAs"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.refactoring.menu"/>
 <hide_menu_item_id id="org.eclipse.ui.file.saveAll"/>
+<hide_menu_item_id id="org.coocox.builder.ui.rebuild"/>
+<hide_menu_item_id id="org.coocox.builder.ui.openFile"/>
+<hide_menu_item_id id="org.eclipse.ui.file.saveAs"/>
 <hide_menu_item_id id="org.coocox.builder.rcp.projectMenu"/>
 <hide_menu_item_id id="org.coocox.builder.rcp.flashMenu"/>
-<hide_menu_item_id id="org.coocox.builder.ui.showHelpViewAction"/>
-<hide_menu_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.debug"/>
-<hide_menu_item_id id="org.coocox.builder.ui.build"/>
-<hide_menu_item_id id="org.coocox.builder.ui.rebuild"/>
-<hide_menu_item_id id="org.eclipse.jdt.ui.refactoring.menu"/>
-<hide_menu_item_id id="org.eclipse.jdt.ui.source.menu"/>
+<hide_menu_item_id id="org.coocox.builder.ui.showHelpViewAction"/>
+<hide_menu_item_id id="org.coocox.builder.ui.newFile"/>
 <hide_menu_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
+<hide_menu_item_id id="org.eclipse.jdt.ui.source.menu"/>
+<hide_menu_item_id id="org.coocox.builder.ui.build"/>
 <hide_menu_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_menu_item_id id="org.coocox.welcome.ui.action.repository"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.newProject"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.newFile"/>
-<hide_toolbar_item_id id="org.eclipse.ui.file.save"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.rebuild"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.debug"/>
-<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
-<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideFlashEraseAction"/>
+<hide_menu_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.actions.TargetManageAction"/>
-<hide_toolbar_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
-<hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.newProject"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.repository"/>
+<hide_toolbar_item_id id="org.eclipse.ui.file.save"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.rebuild"/>
+<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideFlashEraseAction"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.debug"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.newFile"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
+<hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
+<hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
@@ -222,7 +210,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@146ea68" ratio="0.6995565" ratioLeft="631" ratioRight="271" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1b8e4b9">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -262,165 +250,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/keyscanner/keyscanner.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/Src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/keyscanner/keyscanner.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"/>
-<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/Src/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/keyscanner/keyscanner.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/keyscanner/keyscanner.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/keymaps/ibm-model-m-101.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/Src/uart.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/Src/stm32f1xx_it.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/keyscanner/keyscanner.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usb-keyboard/keyscanner/keyscanner.h"/>
 </editors>
-<item historyLabel="keyscanner.c" index="0">
+<item historyLabel="keyscanner.h" index="2">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="stm32f1xx_hal_gpio.h" index="4">
+<position info="not_deleted" x="12772" y="18"/>
+</item>
+<item historyLabel="keyscanner.h" index="2">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="3028" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3646" y="0"/>
+</item>
+<item historyLabel="keyscanner.h" index="2">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="3028" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3694" y="0"/>
+</item>
+<item historyLabel="keyscanner.h" index="2">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="ibm-model-m-101.h" index="3">
 <position/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2433" y="0"/>
+<item historyLabel="keyscanner.h" index="2">
+<position info="not_deleted" x="129" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2488" y="0"/>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="2727" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2519" y="0"/>
+<item historyLabel="uart.c" index="5">
+<position info="not_deleted" x="190" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2577" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="62" y="7"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="2987" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="3431" y="0"/>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position/>
 </item>
 <item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="149" y="0"/>
+<position info="not_deleted" x="129" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="3431" y="0"/>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="2799" y="0"/>
+</item>
+<item historyLabel="uart.c" index="5">
+<position info="not_deleted" x="503" y="0"/>
+</item>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="2729" y="0"/>
+</item>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position/>
+</item>
+<item historyLabel="uart.c" index="5">
+<position info="not_deleted" x="317" y="0"/>
+</item>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position/>
 </item>
 <item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="149" y="0"/>
+<position info="not_deleted" x="129" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="71" y="0"/>
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="3027" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="3430" y="0"/>
-</item>
-<item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="149" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="69" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="3251" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2517" y="0"/>
-</item>
-<item historyLabel="startup_stm32f103xb.s" index="4">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="3694" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="2987" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3589" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2375" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3635" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2433" y="0"/>
+<item historyLabel="stm32f1xx_hal.c" index="6">
+<position/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2488" y="0"/>
+<item historyLabel="stm32f1xx_it.c" index="7">
+<position info="not_deleted" x="5307" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2519" y="0"/>
+<item historyLabel="stm32f1xx_it.c" index="7">
+<position info="not_deleted" x="5406" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2577" y="0"/>
+<item historyLabel="stm32f1xx_it.c" index="7">
+<position info="not_deleted" x="5539" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2469" y="0"/>
+<item historyLabel="stm32f1xx_hal.c" index="6">
+<position info="not_deleted" x="12173" y="0"/>
 </item>
-<item historyLabel="startup_stm32f103xb.s" index="4">
-<position info="not_deleted" x="3694" y="0"/>
+<item historyLabel="stm32f1xx_hal.c" index="6">
+<position info="not_deleted" x="12176" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2469" y="0"/>
+<item historyLabel="stm32f1xx_hal.c" index="6">
+<position info="not_deleted" x="12194" y="0"/>
 </item>
-<item historyLabel="stm32f103xb.h" index="3">
-<position info="not_deleted" x="26209" y="0"/>
+<item historyLabel="stm32f1xx_hal.c" index="6">
+<position info="not_deleted" x="12367" y="0"/>
 </item>
-<item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="70" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3419" y="0"/>
 </item>
-<item historyLabel="stm32f1xx_hal.h" index="5">
+<item historyLabel="keyscanner.c" index="1">
+<position info="not_deleted" x="548" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3512" y="0"/>
+</item>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3512" y="0"/>
+</item>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position/>
+</item>
+<item historyLabel="keyscanner.c" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="70" y="0"/>
+<item historyLabel="ibm-model-m-101.h" index="3">
+<position info="not_deleted" x="298" y="0"/>
 </item>
-<item historyLabel="stm32f1xx_hal_gpio_ex.h" index="6">
+<item historyLabel="keyscanner.c" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stm32f1xx_hal_gpio.h" index="7">
-<position info="not_deleted" x="7787" y="19"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3509" y="0"/>
 </item>
-<item historyLabel="stm32f103xb.h" index="3">
-<position info="not_deleted" x="26209" y="0"/>
+<item historyLabel="keyscanner.c" index="8">
+<position info="not_deleted" x="2670" y="7"/>
 </item>
-<item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="70" y="0"/>
+<item historyLabel="keyscanner.h" index="9">
+<position info="not_deleted" x="228" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2469" y="0"/>
+<item historyLabel="keyscanner.c" index="8">
+<position info="not_deleted" x="2670" y="7"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="1350" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3509" y="0"/>
 </item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2455" y="0"/>
+<item historyLabel="keyscanner.c" index="8">
+<position info="not_deleted" x="2303" y="0"/>
 </item>
-<item historyLabel="startup_stm32f103xb.s" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="2987" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2375" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2433" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2488" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2519" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="2577" y="0"/>
-</item>
-<item historyLabel="stm32f1xx_hal_gpio.h" index="7">
-<position info="not_deleted" x="8370" y="13"/>
-</item>
-<item historyLabel="keyscanner.h" index="2">
-<position info="not_deleted" x="70" y="0"/>
-</item>
-<item historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="Configuration" index="8"/>
-<item active="true" historyLabel="keyscanner.c" index="0">
-<position info="not_deleted" x="168" y="0"/>
+<item active="true" historyLabel="main.c" index="0">
+<position info="not_deleted" x="3509" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -429,10 +418,32 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
-<persistable>
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</persistable>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.h" tooltip="usb-keyboard/keyscanner/keyscanner.h">
+<persistable path="/usb-keyboard/keyscanner/keyscanner.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="usb-keyboard/Src/main.c">
+<persistable path="/usb-keyboard/Src/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ibm-model-m-101.h" tooltip="usb-keyboard/keymaps/ibm-model-m-101.h">
+<persistable path="/usb-keyboard/keymaps/ibm-model-m-101.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.c" tooltip="usb-keyboard/keyscanner/keyscanner.c">
+<persistable path="/usb-keyboard/keyscanner/keyscanner.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal.c" tooltip="usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+<persistable path="/usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.c" tooltip="usb-keyboard/Src/uart.c">
+<persistable path="/usb-keyboard/Src/uart.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_gpio.h" tooltip="usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+<persistable path="/usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal.h" tooltip="usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+<persistable path="/usb-keyboard/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_msp.c" tooltip="usb-keyboard/Src/stm32f1xx_hal_msp.c">
+<persistable path="/usb-keyboard/Src/stm32f1xx_hal_msp.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f103xb.s" tooltip="ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s">
 <persistable path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s"/>
@@ -451,30 +462,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_ctrl.c" tooltip="ibm-model-m/Src/usb_ctrl.c">
 <persistable path="/ibm-model-m/Src/usb_ctrl.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f103xb.h" tooltip="ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
-<persistable path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx.h" tooltip="ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h">
-<persistable path="/ibm-model-m/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_def.h" tooltip="ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
-<persistable path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_conf.h" tooltip="ibm-model-m/Inc/stm32f1xx_hal_conf.h">
-<persistable path="/ibm-model-m/Inc/stm32f1xx_hal_conf.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.h" tooltip="ibm-model-m/keyscanner/keyscanner.h">
-<persistable path="/ibm-model-m/keyscanner/keyscanner.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="printf.c" tooltip="ibm-model-m/stdio/printf.c">
-<persistable path="/ibm-model-m/stdio/printf.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.h" tooltip="ibm-model-m/Inc/uart.h">
-<persistable path="/ibm-model-m/Inc/uart.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32_hal_legacy.h" tooltip="ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
-<persistable path="/ibm-model-m/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"/>
 </file>
 </mruList>
 </workbench>
