@@ -1,5 +1,5 @@
-# ibm-model-m-usb
-This is a firmware to convert the IBM Model M into a USB keyboard.
+# USB Keyboard Firmware Project
+This project started out as a STM32F103 firmware to convert the IBM Model M into a USB keyboard using the existing case, keys and membrane of the IBM Model-M 101 keyboard.
 
 Credits:
 
