@@ -77,8 +77,8 @@
   </Components>
   <Files>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac_ex.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" path="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sram.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sram.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core" path="" type="2"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" type="1"/>
@@ -91,21 +91,21 @@
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx" path="" type="2"/>
+    <File name="keyscanner" path="" type="2"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h" type="1"/>
     <File name="Drivers/CMSIS/Include/core_cmSimd.h" path="Drivers/CMSIS/Include/core_cmSimd.h" type="1"/>
-    <File name="keyscanner" path="" type="2"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" type="1"/>
+    <File name="Drivers/CMSIS/Include/core_cm4.h" path="Drivers/CMSIS/Include/core_cm4.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" type="1"/>
-    <File name="Drivers/CMSIS/Include/core_cm4.h" path="Drivers/CMSIS/Include/core_cm4.h" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class/CDC" path="" type="2"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" type="1"/>
-    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xg.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xg.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" type="1"/>
+    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xg.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xg.h" type="1"/>
     <File name="keymaps/ibm-model-m-101.h" path="keymaps/ibm-model-m-101.h" type="1"/>
     <File name="Inc/usbd_cdc_if.h" path="Inc/usbd_cdc_if.h" type="1"/>
     <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
@@ -118,9 +118,9 @@
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" path="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" type="1"/>
     <File name="keymaps" path="" type="2"/>
     <File name="stdio" path="" type="2"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class" path="" type="2"/>
@@ -141,8 +141,8 @@
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xg.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xg.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xe.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xe.h" type="1"/>
-    <File name="Drivers/CMSIS/Include/core_sc300.h" path="Drivers/CMSIS/Include/core_sc300.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h" type="1"/>
+    <File name="Drivers/CMSIS/Include/core_sc300.h" path="Drivers/CMSIS/Include/core_sc300.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Source/system_stm32f1xx.c" path="Drivers/CMSIS/Device/ST/STM32F1xx/Source/system_stm32f1xx.c" type="1"/>
     <File name="Inc/stm32f1xx_it.h" path="Inc/stm32f1xx_it.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c" type="1"/>
@@ -157,17 +157,17 @@
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" path="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" type="1"/>
     <File name="Inc/uart.h" path="Inc/uart.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101x6.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101x6.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.c" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" path="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" path="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" type="1"/>
     <File name="Inc/usb_ctrl.h" path="Inc/usb_ctrl.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_hcd.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_hcd.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy" path="" type="2"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f107xc.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f107xc.h" type="1"/>
     <File name="Drivers/CMSIS/Include/cmsis_armcc.h" path="Drivers/CMSIS/Include/cmsis_armcc.h" type="1"/>
@@ -187,21 +187,21 @@
     <File name="Drivers/CMSIS/Device/ST" path="" type="2"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c" type="1"/>
     <File name="Inc/mxconstants.h" path="Inc/mxconstants.h" type="1"/>
-    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xe.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xe.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h" type="1"/>
+    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xe.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xe.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src" path="" type="2"/>
     <File name="semihosting/semihosting.c" path="semihosting/semihosting.c" type="1"/>
     <File name="Src/usbd_cdc_if.c" path="Src/usbd_cdc_if.c" type="1"/>
-    <File name="Drivers/CMSIS/Include/core_cm0.h" path="Drivers/CMSIS/Include/core_cm0.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_wwdg.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_wwdg.h" type="1"/>
+    <File name="Drivers/CMSIS/Include/core_cm0.h" path="Drivers/CMSIS/Include/core_cm0.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c" type="1"/>
     <File name="Drivers/CMSIS/Include/cmsis_armcc_V6.h" path="Drivers/CMSIS/Include/cmsis_armcc_V6.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f102x6.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f102x6.h" type="1"/>
-    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xb.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xb.h" type="1"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xb.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f101xb.h" type="1"/>
-    <File name="Drivers/CMSIS/Include/core_cm7.h" path="Drivers/CMSIS/Include/core_cm7.h" type="1"/>
+    <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xb.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f100xb.h" type="1"/>
     <File name="Src/stm32f1xx_it.c" path="Src/stm32f1xx_it.c" type="1"/>
+    <File name="Drivers/CMSIS/Include/core_cm7.h" path="Drivers/CMSIS/Include/core_cm7.h" type="1"/>
     <File name="Src/usbd_conf.c" path="Src/usbd_conf.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" path="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" type="1"/>
@@ -210,11 +210,11 @@
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can_ex.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_eth.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_eth.h" type="1"/>
     <File name="Drivers/CMSIS/Device" path="" type="2"/>
-    <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" path="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" type="1"/>
     <File name="Drivers/CMSIS/Include/arm_math.h" path="Drivers/CMSIS/Include/arm_math.h" type="1"/>
+    <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" path="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src" path="" type="2"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cec.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cec.h" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" path="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cec.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cec.h" type="1"/>
     <File name="keyscanner/keyscanner.c" path="keyscanner/keyscanner.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c" type="1"/>
@@ -228,8 +228,8 @@
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" path="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" type="1"/>
     <File name="Src/uart.c" path="Src/uart.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" type="1"/>
     <File name="Middlewares/ST" path="" type="2"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" path="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.c" type="1"/>
@@ -240,12 +240,12 @@
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h" type="1"/>
     <File name="keyscanner/keyscanner.h" path="keyscanner/keyscanner.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2s.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2s.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_smartcard.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_smartcard.h" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" path="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c" type="1"/>
     <File name="Drivers/CMSIS/Include/core_sc000.h" path="Drivers/CMSIS/Include/core_sc000.h" type="1"/>
     <File name="Src/stm32f1xx_hal_msp.c" path="Src/stm32f1xx_hal_msp.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c" type="1"/>
@@ -259,8 +259,8 @@
     <File name="semihosting/semihosting.h" path="semihosting/semihosting.h" type="1"/>
     <File name="Src" path="" type="2"/>
     <File name="Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s" path="Drivers/CMSIS/Device/ST/STM32F1xx/Source/startup_stm32f103xb.s" type="1"/>
-    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" type="1"/>
     <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c" type="1"/>
+    <File name="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" type="1"/>
     <File name="Src/usb_ctrl.c" path="Src/usb_ctrl.c" type="1"/>
     <File name="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" path="" type="2"/>
   </Files>
