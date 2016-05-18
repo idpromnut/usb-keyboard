@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name IPC7351-Nominal)(type KiCad)(uri C:\dev\kicad-pcblib\IPC7351-Nominal.pretty)(options "")(descr ""))
+)

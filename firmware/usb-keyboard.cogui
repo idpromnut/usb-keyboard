@@ -22,9 +22,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/Src/main.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3695" selectionTopPixel="1224"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.c" partName="keyscanner.c" path="C:/dev/usb-keyboard/keyscanner/keyscanner.c" title="keyscanner.c" tooltip="C:/dev/usb-keyboard/keyscanner/keyscanner.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.c" partName="keyscanner.c" path="C:/dev/usb-keyboard/firmware/keyscanner/keyscanner.c" title="keyscanner.c" tooltip="C:/dev/usb-keyboard/firmware/keyscanner/keyscanner.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/keyscanner/keyscanner.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3304" selectionTopPixel="790"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3304" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="keyscanner.h" partName="keyscanner.h" path="C:/dev/usb-keyboard/keyscanner/keyscanner.h" title="keyscanner.h" tooltip="C:/dev/usb-keyboard/keyscanner/keyscanner.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/usb-keyboard/keyscanner/keyscanner.h"/>
@@ -410,11 +410,6 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
-<persistable>
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ibm-model-m-101.h" tooltip="usb-keyboard/keymaps/ibm-model-m-101.h">
 <persistable path="/usb-keyboard/keymaps/ibm-model-m-101.h"/>
 </file>
@@ -453,6 +448,9 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.h" tooltip="usb-keyboard/Inc/uart.h">
 <persistable path="/usb-keyboard/Inc/uart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_msp.c" tooltip="usb-keyboard/Src/stm32f1xx_hal_msp.c">
+<persistable path="/usb-keyboard/Src/stm32f1xx_hal_msp.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f1xx_hal_msp.c" tooltip="usb-keyboard/Src/stm32f1xx_hal_msp.c">
 <persistable path="/usb-keyboard/Src/stm32f1xx_hal_msp.c"/>
