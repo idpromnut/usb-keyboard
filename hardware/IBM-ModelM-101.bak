@@ -783,6 +783,4 @@ Add remaining caps
 Text Notes 2725 2350 0    60   ~ 0
 Finish BOOT0 + reset\ncircuit
 NoConn ~ 3800 2100
-Text Notes 6875 2900 0    60   ~ 0
-Add in connector for\nLEDs here
 $EndSCHEMATC
