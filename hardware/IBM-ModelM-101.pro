@@ -1,4 +1,4 @@
-update=5/19/2016 12:01:35 AM
+update=Thursday, May 19, 2016 'pmt' 12:59:14 pm
 version=1
 last_client=kicad
 [pcbnew]
@@ -76,3 +76,4 @@ LibName44=library/semi-diode-ST
 LibName45=library/power
 LibName46=library/mechanical
 LibName47=library/_passive
+LibName48=library/electomech-misc
