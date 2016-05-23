@@ -1,4 +1,4 @@
-update=Thursday, May 19, 2016 'pmt' 12:59:14 pm
+update=5/22/2016 10:07:47 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -77,3 +77,5 @@ LibName45=library/power
 LibName46=library/mechanical
 LibName47=library/_passive
 LibName48=library/electomech-misc
+LibName49=library/_semi
+LibName50=library/semi-opto-generic
