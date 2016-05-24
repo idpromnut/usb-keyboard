@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:/dev/usb-keyboard/hardware/IBM-ModelM-101.sch</source>
+    <date>5/23/2016 6:13:36 PM</date>
+    <tool>Eeschema 4.0.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>IBM-ModelM-101.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U2">
+      <value>STM32F102C6</value>
+      <footprint>IPC7351-Nominal:QFP50P900X900X160-48</footprint>
+      <fields>
+        <field name="BOM">IC ST STM32F102C6</field>
+      </fields>
+      <libsource lib="ST" part="STM32F102C6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D12BC</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>CONN-61729-USB-B</value>
+      <footprint>conn-fci:CONN-61729</footprint>
+      <fields>
+        <field name="BOM">DIST DIGIKEY 609-3657-ND</field>
+      </fields>
+      <libsource lib="conn-fci" part="CONN-61729-USB-B"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D138A</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>TLV70233DBV</value>
+      <footprint>smd-semi:SOT-23-5</footprint>
+      <fields>
+        <field name="BOM">IC TI TLV702vvDBV</field>
+      </fields>
+      <libsource lib="TexasInstruments" part="TLV702vvDBV"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D1946</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>KEYBOARD_INPUT_LINES</value>
+      <footprint>conn-100mil:CONN-100MIL-F-1x16</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-F-1x16"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D1CB5</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>8 MHz</value>
+      <footprint>IPC7351-Nominal:XTAL1200X480X460</footprint>
+      <fields>
+        <field name="BOM">ATS08ASM-1E</field>
+      </fields>
+      <libsource lib="pasv-xtal" part="XTAL-HC49US-SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D2351</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>JTAG</value>
+      <footprint>conn-100mil:CONN-100MIL-M-2x10-SHROUD</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-M-2x10-SHROUD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D254B</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>20pF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100pF C0G 50V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D2824</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>20pF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100pF C0G 50V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D2878</tstamp>
+    </comp>
+    <comp ref="DZ1">
+      <value>USBLC6-2SC6</value>
+      <footprint>smd-semi:SOT-23-6</footprint>
+      <datasheet>http://www.st.com/web/en/resource/technical/document/datasheet/CD00050750.pdf</datasheet>
+      <fields>
+        <field name="BOM">TVS ST USBLC6-2SC6</field>
+      </fields>
+      <libsource lib="semi-diode-ST" part="USBLC6-2SC6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D341F</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>KEYBOARD_ACTIVE_LINES</value>
+      <footprint>conn-100mil:CONN-100MIL-F-1x8</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-F-1x8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573D1C60</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>22R</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DAA38</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>22R</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DAAB7</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DE234</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DF875</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DFC94</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DFCE9</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E0054</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E0CAA</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>0R</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E32C7</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E40CE</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DE717</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573DFF0E</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>100K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E098F</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E0DED</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>100K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E18DD</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E2C76</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CAP MLCC 100nF C0G 6.3V 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E4D91</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>1uF</value>
+      <footprint>IPC7351-Nominal:CAPC1608X55</footprint>
+      <fields>
+        <field name="BOM">CL10B105KQ8NNNC</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E4F8D</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>TACT-TE-FSMSM</value>
+      <footprint>manuf:TE-FSMSM</footprint>
+      <fields>
+        <field name="BOM">SWITCH TE FSMSM</field>
+      </fields>
+      <libsource lib="electomech-misc" part="TACT-TE-FSMSM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E5DA6</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>TACT-TE-FSMSM</value>
+      <footprint>manuf:TE-FSMSM</footprint>
+      <fields>
+        <field name="BOM">SWITCH TE FSMSM</field>
+      </fields>
+      <libsource lib="electomech-misc" part="TACT-TE-FSMSM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>573E5EE0</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>STATUS_LEDS</value>
+      <footprint>conn-100mil:CONN-100MIL-M-1x4-SHROUD</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-M-1x4-SHROUD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5740F326</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>DEBUG_FTDI</value>
+      <footprint>conn-100mil:CONN-100MIL-M-1x6</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-M-1x6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5742C1E3</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>CHASSIS_GROUND</value>
+      <footprint>conn-100mil:CONN-100MIL-M-1x2</footprint>
+      <libsource lib="conn-100mil" part="CONN-100MIL-M-1x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57433C0C</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>IPC7351-Nominal:CAPC2012X70</footprint>
+      <fields>
+        <field name="BOM">GRM219R61A105KA01D</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0805"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>574353E8</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>1uF</value>
+      <footprint>IPC7351-Nominal:CAPC2012X70</footprint>
+      <fields>
+        <field name="BOM">GRM219R61A105KA01D</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0805"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>574355E0</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10uF</value>
+      <footprint>IPC7351-Nominal:CAPC2012X70</footprint>
+      <fields>
+        <field name="BOM">GRM21BR61A106ME19L</field>
+      </fields>
+      <libsource lib="pasv-cap" part="C-0805"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5743759C</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5743BF33</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1K</value>
+      <footprint>IPC7351-Nominal:RESC1608X50</footprint>
+      <fields>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <libsource lib="pasv-res" part="R-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5743BFF7</tstamp>
+    </comp>
+    <comp ref="DS1">
+      <value>5V_PWR_GOOD</value>
+      <footprint>smd-semi:LED-0603</footprint>
+      <fields>
+        <field name="BOM">LED RED [0603]</field>
+      </fields>
+      <libsource lib="semi-opto-generic" part="LED-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5743C550</tstamp>
+    </comp>
+    <comp ref="DS2">
+      <value>3V3_PWR_GOOD</value>
+      <footprint>smd-semi:LED-0603</footprint>
+      <fields>
+        <field name="BOM">LED RED [0603]</field>
+      </fields>
+      <libsource lib="semi-opto-generic" part="LED-0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5743C918</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="pasv-cap" part="C-0603">
+      <description>Chip capacitor, EIA 0603, metric 1608</description>
+      <footprints>
+        <fp>CAPC1608X55</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-0603</field>
+        <field name="Footprint">IPC7351-Nominal:CAPC1608X55</field>
+        <field name="BOM">CAP MLCC 100pF C0G 50V 5% [0603]</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pasv-cap" part="C-0805">
+      <description>Chip capacitor, EIA 0805, metric 2012</description>
+      <footprints>
+        <fp>CAPC2012X70</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-0805</field>
+        <field name="Footprint">IPC7351-Nominal:CAPC2012X70</field>
+        <field name="BOM">CAP MLCC 100pF C0G 50V 5% [0805]</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-F-1x16">
+      <footprints>
+        <fp>CONN-100MIL-F-1x16</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-F-1x16</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-F-1x16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-F-1x8">
+      <footprints>
+        <fp>CONN-100MIL-F-1x8</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-F-1x8</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-F-1x8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-M-1x2">
+      <footprints>
+        <fp>CONN-100MIL-M-1x2</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-M-1x2</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-M-1x2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-M-1x4-SHROUD">
+      <footprints>
+        <fp>CONN-100MIL-M-1x4-SHROUD</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-M-1x4-SHROUD</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-M-1x4-SHROUD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-M-1x6">
+      <footprints>
+        <fp>CONN-100MIL-M-1x6</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-M-1x6</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-M-1x6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-100mil" part="CONN-100MIL-M-2x10-SHROUD">
+      <footprints>
+        <fp>CONN-100MIL-M-2x10-SHROUD</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-100MIL-M-2x10-SHROUD</field>
+        <field name="Footprint">conn-100mil:CONN-100MIL-M-2x10-SHROUD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn-fci" part="CONN-61729-USB-B">
+      <description>USB-B</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN-61729-USB-B</field>
+        <field name="Footprint">conn-fci:CONN-61729</field>
+        <field name="BOM">DIST DIGIKEY 609-3657-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="V+" type="passive"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="semi-opto-generic" part="LED-0603">
+      <description>LED Red [0603]</description>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">LED-0603</field>
+        <field name="Footprint">smd-semi:LED-0603</field>
+        <field name="BOM">LED RED [0603]</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pasv-res" part="R-0603">
+      <description>Chip resistor, EIA 0603, metric 1608</description>
+      <footprints>
+        <fp>RESC1608X50</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-0603</field>
+        <field name="Footprint">IPC7351-Nominal:RESC1608X50</field>
+        <field name="BOM">RES SMD 1k 5% [0603]</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ST" part="STM32F102C6">
+      <description>MCU 32bit/ARM-M3 ROM:32KB RAM:16KB USB DFU [LQFP-48]</description>
+      <footprints>
+        <fp>QFP50P900X900X145-48</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM32F102C6</field>
+        <field name="Footprint">IPC7351-Nominal:QFP50P900X900X160-48</field>
+        <field name="BOM">IC ST STM32F102C6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="power_in"/>
+        <pin num="2" name="PC13/TAMPER/RTC" type="3state"/>
+        <pin num="3" name="PC14/OSC32_IN" type="3state"/>
+        <pin num="4" name="PC15/OSC32_OUT" type="3state"/>
+        <pin num="5" name="OSC_IN" type="input"/>
+        <pin num="6" name="OSC_OUT" type="input"/>
+        <pin num="7" name="~RST" type="input"/>
+        <pin num="8" name="VSSA" type="power_in"/>
+        <pin num="9" name="VDDA" type="power_in"/>
+        <pin num="10" name="PA0" type="3state"/>
+        <pin num="11" name="PA1" type="3state"/>
+        <pin num="12" name="PA2" type="3state"/>
+        <pin num="13" name="PA3" type="3state"/>
+        <pin num="14" name="PA4" type="3state"/>
+        <pin num="15" name="PA5" type="3state"/>
+        <pin num="16" name="PA6" type="3state"/>
+        <pin num="17" name="PA7" type="3state"/>
+        <pin num="18" name="PB0" type="3state"/>
+        <pin num="19" name="PB1" type="3state"/>
+        <pin num="20" name="PB2" type="3state"/>
+        <pin num="21" name="PB10" type="3state"/>
+        <pin num="22" name="PB11" type="3state"/>
+        <pin num="23" name="GND" type="power_in"/>
+        <pin num="24" name="VDD" type="power_in"/>
+        <pin num="25" name="PB12" type="3state"/>
+        <pin num="26" name="PB13" type="3state"/>
+        <pin num="27" name="PB14" type="3state"/>
+        <pin num="28" name="PB15" type="3state"/>
+        <pin num="29" name="PA8" type="3state"/>
+        <pin num="30" name="PA9" type="3state"/>
+        <pin num="31" name="PA10" type="3state"/>
+        <pin num="32" name="PA11" type="3state"/>
+        <pin num="33" name="PA12" type="3state"/>
+        <pin num="34" name="PA13" type="3state"/>
+        <pin num="35" name="GND" type="power_in"/>
+        <pin num="36" name="VDD2" type="power_in"/>
+        <pin num="37" name="PA14" type="3state"/>
+        <pin num="38" name="PA15" type="3state"/>
+        <pin num="39" name="PB3" type="3state"/>
+        <pin num="40" name="PB4" type="3state"/>
+        <pin num="41" name="PB5" type="3state"/>
+        <pin num="42" name="PB6" type="3state"/>
+        <pin num="43" name="PB7" type="3state"/>
+        <pin num="44" name="BOOT0" type="input"/>
+        <pin num="45" name="PB8" type="3state"/>
+        <pin num="46" name="PB9" type="3state"/>
+        <pin num="47" name="GND" type="power_in"/>
+        <pin num="48" name="VDD3" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="electomech-misc" part="TACT-TE-FSMSM">
+      <description>Switch Tactile SPST [SMD]</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">TACT-TE-FSMSM</field>
+        <field name="Footprint">manuf:TE-FSMSM</field>
+        <field name="BOM">SWITCH TE FSMSM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TexasInstruments" part="TLV702vvDBV">
+      <description>Reg LDO 300mA [SOT-23-5]</description>
+      <footprints>
+        <fp>TO-252</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV702vvDBV</field>
+        <field name="Footprint">smd-semi:SOT-23-5</field>
+        <field name="BOM">IC TI TLV702vvDBV</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="semi-diode-ST" part="USBLC6-2SC6">
+      <description>TVS.3 3.5pF [SOT-23-6]</description>
+      <fields>
+        <field name="Reference">DZ</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">smd-semi:SOT-23-6</field>
+        <field name="Datasheet">http://www.st.com/web/en/resource/technical/document/datasheet/CD00050750.pdf</field>
+        <field name="BOM">TVS ST USBLC6-2SC6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pasv-xtal" part="XTAL-HC49US-SMD">
+      <description>Crystal, SMD HC-49/US</description>
+      <footprints>
+        <fp>XTAL1200X480X460</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">XTAL-HC49US-SMD</field>
+        <field name="Footprint">IPC7351-Nominal:XTAL1200X480X460</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="ST">
+      <uri>C:\dev\kicad-schlib\library\ST.lib</uri>
+    </library>
+    <library logical="conn-fci">
+      <uri>C:\dev\kicad-schlib\library\conn-fci.lib</uri>
+    </library>
+    <library logical="conn-100mil">
+      <uri>C:\dev\kicad-schlib\library\conn-100mil.lib</uri>
+    </library>
+    <library logical="TexasInstruments">
+      <uri>C:\dev\kicad-schlib\library\TexasInstruments.lib</uri>
+    </library>
+    <library logical="pasv-cap">
+      <uri>C:\dev\kicad-schlib\library\pasv-cap.lib</uri>
+    </library>
+    <library logical="pasv-res">
+      <uri>C:\dev\kicad-schlib\library\pasv-res.lib</uri>
+    </library>
+    <library logical="pasv-xtal">
+      <uri>C:\dev\kicad-schlib\library\pasv-xtal.lib</uri>
+    </library>
+    <library logical="semi-diode-ST">
+      <uri>C:\dev\kicad-schlib\library\semi-diode-ST.lib</uri>
+    </library>
+    <library logical="electomech-misc">
+      <uri>C:\dev\kicad-schlib\library\electomech-misc.lib</uri>
+    </library>
+    <library logical="semi-opto-generic">
+      <uri>C:\dev\kicad-schlib\library\semi-opto-generic.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J7-Pad19)">
+      <node ref="J7" pin="19"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="2" name="/USB_DP">
+      <node ref="R4" pin="1"/>
+      <node ref="U2" pin="33"/>
+    </net>
+    <net code="3" name="Net-(J7-Pad11)">
+      <node ref="J7" pin="11"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="4" name="/USB_DM">
+      <node ref="R3" pin="1"/>
+      <node ref="U2" pin="32"/>
+    </net>
+    <net code="5" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+      <node ref="U2" pin="10"/>
+    </net>
+    <net code="6" name="Net-(J3-Pad7)">
+      <node ref="J3" pin="7"/>
+      <node ref="U2" pin="42"/>
+    </net>
+    <net code="7" name="Net-(DZ1-Pad4)">
+      <node ref="R4" pin="2"/>
+      <node ref="DZ1" pin="4"/>
+    </net>
+    <net code="8" name="Net-(DZ1-Pad6)">
+      <node ref="R3" pin="2"/>
+      <node ref="DZ1" pin="6"/>
+    </net>
+    <net code="9" name="Net-(DZ1-Pad1)">
+      <node ref="J1" pin="2"/>
+      <node ref="DZ1" pin="1"/>
+    </net>
+    <net code="10" name="Net-(DZ1-Pad3)">
+      <node ref="J1" pin="3"/>
+      <node ref="DZ1" pin="3"/>
+    </net>
+    <net code="11" name="Net-(J3-Pad16)">
+      <node ref="J3" pin="16"/>
+      <node ref="U2" pin="28"/>
+    </net>
+    <net code="12" name="Net-(J3-Pad15)">
+      <node ref="U2" pin="27"/>
+      <node ref="J3" pin="15"/>
+    </net>
+    <net code="13" name="Net-(J3-Pad14)">
+      <node ref="U2" pin="26"/>
+      <node ref="J3" pin="14"/>
+    </net>
+    <net code="14" name="Net-(J3-Pad13)">
+      <node ref="U2" pin="25"/>
+      <node ref="J3" pin="13"/>
+    </net>
+    <net code="15" name="Net-(J3-Pad12)">
+      <node ref="U2" pin="22"/>
+      <node ref="J3" pin="12"/>
+    </net>
+    <net code="16" name="Net-(J3-Pad11)">
+      <node ref="J3" pin="11"/>
+      <node ref="U2" pin="21"/>
+    </net>
+    <net code="17" name="Net-(J3-Pad10)">
+      <node ref="J3" pin="10"/>
+      <node ref="U2" pin="46"/>
+    </net>
+    <net code="18" name="Net-(J3-Pad9)">
+      <node ref="J3" pin="9"/>
+      <node ref="U2" pin="45"/>
+    </net>
+    <net code="19" name="Net-(J3-Pad8)">
+      <node ref="U2" pin="43"/>
+      <node ref="J3" pin="8"/>
+    </net>
+    <net code="20" name="Net-(J3-Pad6)">
+      <node ref="U2" pin="41"/>
+      <node ref="J3" pin="6"/>
+    </net>
+    <net code="21" name="Net-(J3-Pad3)">
+      <node ref="U2" pin="20"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="22" name="Net-(J3-Pad2)">
+      <node ref="U2" pin="19"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="23" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="U2" pin="18"/>
+    </net>
+    <net code="24" name="Net-(J2-Pad8)">
+      <node ref="J2" pin="8"/>
+      <node ref="U2" pin="17"/>
+    </net>
+    <net code="25" name="Net-(J2-Pad7)">
+      <node ref="J2" pin="7"/>
+      <node ref="U2" pin="16"/>
+    </net>
+    <net code="26" name="Net-(J2-Pad6)">
+      <node ref="U2" pin="15"/>
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="27" name="Net-(J2-Pad5)">
+      <node ref="J2" pin="5"/>
+      <node ref="U2" pin="14"/>
+    </net>
+    <net code="28" name="Net-(J2-Pad4)">
+      <node ref="U2" pin="13"/>
+      <node ref="J2" pin="4"/>
+    </net>
+    <net code="29" name="Net-(J2-Pad3)">
+      <node ref="U2" pin="12"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="30" name="Net-(J2-Pad2)">
+      <node ref="U2" pin="11"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="31" name="GND">
+      <node ref="J7" pin="8"/>
+      <node ref="J7" pin="6"/>
+      <node ref="J7" pin="10"/>
+      <node ref="J7" pin="12"/>
+      <node ref="J7" pin="20"/>
+      <node ref="C8" pin="1"/>
+      <node ref="U2" pin="23"/>
+      <node ref="SW2" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U1" pin="2"/>
+      <node ref="J1" pin="SH"/>
+      <node ref="J1" pin="4"/>
+      <node ref="U2" pin="47"/>
+      <node ref="U2" pin="35"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R5" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J7" pin="14"/>
+      <node ref="J7" pin="4"/>
+      <node ref="DZ1" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="J7" pin="18"/>
+      <node ref="J7" pin="16"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="DS1" pin="1"/>
+      <node ref="DS2" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="J6" pin="1"/>
+      <node ref="C7" pin="2"/>
+    </net>
+    <net code="32" name="Net-(J6-Pad6)">
+      <node ref="J6" pin="6"/>
+    </net>
+    <net code="33" name="Net-(J6-Pad2)">
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="34" name="+3V3">
+      <node ref="C6" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U2" pin="48"/>
+      <node ref="J6" pin="3"/>
+      <node ref="J5" pin="3"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U2" pin="9"/>
+      <node ref="U2" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="U2" pin="24"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R8" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U2" pin="36"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="R12" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J7" pin="1"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="35" name="/UART_TX">
+      <node ref="U2" pin="30"/>
+      <node ref="J6" pin="5"/>
+    </net>
+    <net code="36" name="/UART_RX">
+      <node ref="U2" pin="31"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="37" name="Net-(DS2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="DS2" pin="2"/>
+    </net>
+    <net code="38" name="Net-(DS1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="DS1" pin="2"/>
+    </net>
+    <net code="39" name="+5V">
+      <node ref="R13" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="DZ1" pin="5"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="40" name="/JTDI">
+      <node ref="R8" pin="2"/>
+      <node ref="J5" pin="4"/>
+      <node ref="J7" pin="5"/>
+      <node ref="U2" pin="38"/>
+    </net>
+    <net code="41" name="/JTCK/SWCLK">
+      <node ref="J7" pin="9"/>
+      <node ref="J5" pin="2"/>
+      <node ref="U2" pin="37"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="42" name="/JTMS/SWDIO">
+      <node ref="R9" pin="2"/>
+      <node ref="U2" pin="34"/>
+      <node ref="J7" pin="7"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="43" name="/NRST">
+      <node ref="J7" pin="15"/>
+      <node ref="SW2" pin="2"/>
+      <node ref="U2" pin="7"/>
+      <node ref="C12" pin="2"/>
+      <node ref="R12" pin="2"/>
+    </net>
+    <net code="44" name="Net-(J7-Pad17)">
+      <node ref="J7" pin="17"/>
+    </net>
+    <net code="45" name="/BOOT0">
+      <node ref="R5" pin="1"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="U2" pin="44"/>
+    </net>
+    <net code="46" name="Net-(C11-Pad1)">
+      <node ref="X1" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="47" name="Net-(C10-Pad1)">
+      <node ref="C10" pin="1"/>
+      <node ref="U2" pin="5"/>
+      <node ref="X1" pin="1"/>
+    </net>
+    <net code="48" name="Net-(U2-Pad4)">
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="49" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="50" name="Net-(U2-Pad2)">
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="51" name="Net-(U2-Pad29)">
+      <node ref="U2" pin="29"/>
+    </net>
+    <net code="52" name="/JNTRST">
+      <node ref="J7" pin="3"/>
+      <node ref="J3" pin="5"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U2" pin="40"/>
+    </net>
+    <net code="53" name="/JTDO">
+      <node ref="U2" pin="39"/>
+      <node ref="R11" pin="2"/>
+      <node ref="J3" pin="4"/>
+      <node ref="J7" pin="13"/>
+    </net>
+  </nets>
+</export>
