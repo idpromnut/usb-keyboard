@@ -1,11 +1,9 @@
-update=5/23/2016 8:06:32 AM
+update=Friday, June 10, 2016 'pmt' 12:51:34 pm
 version=1
 last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../kicad-schlib
@@ -79,3 +77,5 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
+[general]
+version=1
