@@ -86,10 +86,10 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  KS_Init();
-  UserInterface_Init();
-  USB_Control_Init();
-  USB_Control_Enable();
+//  KS_Init();
+//  UserInterface_Init();
+//  USB_Control_Init();
+//  USB_Control_Enable();
 
   /* USER CODE END 2 */
 
@@ -105,7 +105,13 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	  HAL_Delay(10);
+
+//	  HAL_Delay(10);
+
+	  HAL_Delay(1000);
+	  printf("TEST\r\n");
+
+/*
 	  scanCode = KS_ReadScanCode();
 	  if(scanCode > 0)
 	  {
@@ -115,6 +121,7 @@ int main(void)
 		  USB_Send_All_Keys_Released();
 		  HAL_Delay(10);
 	  }
+*/
   /* USER CODE BEGIN 3 */
 
   }
@@ -130,10 +137,9 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
   RCC_PeriphCLKInitTypeDef PeriphClkInit;
 
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
