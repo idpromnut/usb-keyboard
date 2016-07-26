@@ -33,26 +33,25 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
 #include "usb_device.h"
-#include "usb_ctrl.h"
-#include "uart.h"
-#include "keyscanner.h"
-#include "user_interface.h"
-#include <stdio.h>
+#include "devicecontrol/uart.h"
+#include "devicecontrol/usb_ctrl.h"
+#include "devicecontrol/usb_keyboard.h"
+#include "devicecontrol/user_interface.h"
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
+/* Private variables ---------------------------------------------------------*/
+
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-RTC_HandleTypeDef hrtc;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_RTC_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -81,21 +80,16 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   UART_Init();
-  MX_RTC_Init();
   MX_USB_DEVICE_Init();
+  USB_Control_Init();
+  USB_Control_Enable();
 
   /* USER CODE BEGIN 2 */
-
-//  KS_Init();
-//  UserInterface_Init();
-//  USB_Control_Init();
-//  USB_Control_Enable();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
   uint8_t VERSION_STRING[] = "USB Keyboard Firmware v0.1\n";
 
   printf("%s", VERSION_STRING);
@@ -128,6 +122,7 @@ int main(void)
   /* USER CODE END 3 */
 
 }
+
 /** System Clock Configuration
 */
 void SystemClock_Config(void)
@@ -153,10 +148,11 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1);
 
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_USB;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit);
+
+//  HAL_RCC_MCOConfig(RCC_MCO, RCC_MCO1SOURCE_PLLCLK, RCC_MCODIV_1);
 
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
@@ -164,34 +160,6 @@ void SystemClock_Config(void)
 
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
-}
-
-/* RTC init function */
-void MX_RTC_Init(void)
-{
-
-  RTC_TimeTypeDef sTime;
-  RTC_DateTypeDef DateToUpdate;
-
-    /**Initialize RTC and set the Time and Date 
-    */
-  hrtc.Instance = RTC;
-  hrtc.Init.AsynchPrediv = RTC_AUTO_1_SECOND;
-  hrtc.Init.OutPut = RTC_OUTPUTSOURCE_SECOND;
-  HAL_RTC_Init(&hrtc);
-
-  sTime.Hours = 0x1;
-  sTime.Minutes = 0x0;
-  sTime.Seconds = 0x0;
-
-  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD);
-
-  DateToUpdate.WeekDay = RTC_WEEKDAY_MONDAY;
-  DateToUpdate.Month = RTC_MONTH_JANUARY;
-  DateToUpdate.Date = 0x1;
-  DateToUpdate.Year = 0x0;
-
-  HAL_RTC_SetDate(&hrtc, &DateToUpdate, RTC_FORMAT_BCD);
 }
 
 /** Configure pins as 
@@ -204,10 +172,11 @@ void MX_RTC_Init(void)
 void MX_GPIO_Init(void)
 {
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 }
 
 /* USER CODE BEGIN 4 */
