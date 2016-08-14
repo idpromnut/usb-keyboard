@@ -37,6 +37,7 @@
 #include "devicecontrol/usb_ctrl.h"
 #include "devicecontrol/usb_keyboard.h"
 #include "devicecontrol/user_interface.h"
+#include "keyscanner/keyscanner.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -95,27 +96,55 @@ int main(void)
   printf("%s", VERSION_STRING);
 
   uint8_t scanCode;
+  uint8_t capsLockState = 0, scrollLockState = 0, numLockState = 0;
+
+  KS_Init();
+  UserInterface_Init();
+
+  // toggle LEDs to show board is initialized
+  UserInterface_Led_On(NUM_LOCK);
+  HAL_Delay(100);
+  UserInterface_Led_On(CAPS_LOCK);
+  HAL_Delay(100);
+  UserInterface_Led_On(SCROLL_LOCK);
+  HAL_Delay(500);
+  UserInterface_Led_All_Off();
 
   while (1)
   {
   /* USER CODE END WHILE */
 
-//	  HAL_Delay(10);
-
-	  HAL_Delay(1000);
-	  printf("TEST\r\n");
-
-/*
+	  HAL_Delay(10);
 	  scanCode = KS_ReadScanCode();
 	  if(scanCode > 0)
 	  {
 		  printf("Key: 0x%02X\n", scanCode);
+		  switch(scanCode)
+		  {
+			case 0x39:
+				capsLockState = !capsLockState;
+				UserInterface_Led_Set(CAPS_LOCK, capsLockState);
+				HAL_Delay(100);
+				break;
+			case 0x53:
+				numLockState = !numLockState;
+				UserInterface_Led_Set(NUM_LOCK, numLockState);
+				HAL_Delay(100);
+				break;
+			case 0x47:
+				scrollLockState = !scrollLockState;
+				UserInterface_Led_Set(SCROLL_LOCK, scrollLockState);
+				HAL_Delay(100);
+				break;
+		  }
+
 		  USB_Send_Key_Press(scanCode, 0);
 		  HAL_Delay(10);
 		  USB_Send_All_Keys_Released();
-		  HAL_Delay(10);
+		  HAL_Delay(80);
 	  }
-*/
+
+
   /* USER CODE BEGIN 3 */
 
   }
@@ -172,11 +201,10 @@ void SystemClock_Config(void)
 void MX_GPIO_Init(void)
 {
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
+//  __HAL_RCC_GPIOD_CLK_ENABLE();
 }
 
 /* USER CODE BEGIN 4 */

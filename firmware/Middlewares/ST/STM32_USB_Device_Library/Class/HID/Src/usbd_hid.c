@@ -108,6 +108,9 @@ static uint8_t  *USBD_HID_GetCfgDesc (uint16_t *length);
 static uint8_t  *USBD_HID_GetDeviceQualifierDesc (uint16_t *length);
 
 static uint8_t  USBD_HID_DataIn (USBD_HandleTypeDef *pdev, uint8_t epnum);
+
+static uint8_t  USBD_HID_DataOut (USBD_HandleTypeDef *pdev, uint8_t epnum);
+
 /**
   * @}
   */ 
@@ -124,7 +127,7 @@ USBD_ClassTypeDef  USBD_HID =
   NULL, /*EP0_TxSent*/  
   NULL, /*EP0_RxReady*/
   USBD_HID_DataIn, /*DataIn*/
-  NULL, /*DataOut*/
+  USBD_HID_DataOut, /*DataOut*/
   NULL, /*SOF */
   NULL,
   NULL,      
@@ -479,6 +482,22 @@ static uint8_t  USBD_HID_DataIn (USBD_HandleTypeDef *pdev,
   /* Ensure that the FIFO is empty before a new transfer, this condition could 
   be caused by  a new transfer before the end of the previous transfer */
   ((USBD_HID_HandleTypeDef *)pdev->pClassData)->state = HID_IDLE;
+  return USBD_OK;
+}
+
+
+/**
+  * @brief  USBD_HID_DataOut
+  *         handle data OUT Stage
+  * @param  pdev: device instance
+  * @param  epnum: endpoint index
+  * @retval status
+  */
+static uint8_t  USBD_HID_DataOut (USBD_HandleTypeDef *pdev,
+                              	  uint8_t epnum)
+{
+  ((USBD_HID_HandleTypeDef *)pdev->pClassData)->state = HID_IDLE;
+  printf("USB data out\n");
   return USBD_OK;
 }
 

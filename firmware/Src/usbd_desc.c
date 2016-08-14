@@ -56,10 +56,12 @@
 /** @defgroup USBD_DESC_Private_Defines
   * @{
   */ 
-#define USBD_VID     1155
-#define USBD_LANGID_STRING     1033
+
+#define USBD_VID     					0x0483
+#define USBD_PID_FS     				0x572B
+
+#define USBD_LANGID_STRING     			1033
 #define USBD_MANUFACTURER_STRING     	"Unrecoverable.org"
-#define USBD_PID_FS     22315
 #define USBD_PRODUCT_STRING_FS     		"IBM Model-M Keyboard (USB)"
 #define USBD_SERIALNUMBER_STRING_FS     "00000000001A"
 #define USBD_CONFIGURATION_STRING_FS    "HID Config"
