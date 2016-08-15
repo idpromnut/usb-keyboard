@@ -85,7 +85,12 @@ uint8_t KS_ReadScanCode()
 			// detected a key press
 			//decode
 			uint8_t readLine = KS_BitPositionToInteger(scannedInput);
-			if (KEY_MAP[i][readLine] > 0) return KEY_MAP[i][readLine];
+			if (KEY_MAP[i][readLine] > 0) {
+				return KEY_MAP[i][readLine];
+			}
+			else {
+				printf("No key-code found for scanned key: %i/%i\n", i, readLine);
+			}
 		}
 	}
 
