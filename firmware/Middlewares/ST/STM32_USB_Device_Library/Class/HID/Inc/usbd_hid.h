@@ -92,7 +92,7 @@ typedef struct
   uint32_t             Protocol;   
   uint32_t             IdleState;  
   uint32_t             AltSetting;
-  HID_StateTypeDef     state;  
+  HID_StateTypeDef     state;
 }
 USBD_HID_HandleTypeDef; 
 /**

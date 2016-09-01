@@ -5,9 +5,7 @@
 
 
 void KS_Init();
-uint16_t KS_ScanForKeyPress(uint8_t iActiveLine);
-void KS_FormatScanLines(uint8_t iActiveLines, uint16_t iReadLines);
-uint8_t KS_PrintScanLines();
-uint8_t KS_ReadScanCode();
+void KS_PrintScanLines();
+uint8_t KS_ReadScanCode(uint8_t* scanCodeBuffer, uint8_t bufferLength, uint8_t* modifiers);
 
 #endif

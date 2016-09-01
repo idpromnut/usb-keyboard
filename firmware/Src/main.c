@@ -95,8 +95,11 @@ int main(void)
 
   printf("%s", VERSION_STRING);
 
-  uint8_t scanCode;
+  uint8_t keysScanned;
   uint8_t capsLockState = 0, scrollLockState = 0, numLockState = 0;
+  uint8_t scanCodeBufferSize = 8;
+  uint8_t scanCodeBuffer[scanCodeBufferSize];
+  uint8_t modifiers;
 
   KS_Init();
   UserInterface_Init();
@@ -107,7 +110,7 @@ int main(void)
   UserInterface_Led_On(CAPS_LOCK);
   HAL_Delay(100);
   UserInterface_Led_On(SCROLL_LOCK);
-  HAL_Delay(500);
+  HAL_Delay(800);
   UserInterface_Led_All_Off();
 
   while (1)
@@ -115,11 +118,11 @@ int main(void)
   /* USER CODE END WHILE */
 
 	  HAL_Delay(10);
-	  scanCode = KS_ReadScanCode();
-	  if(scanCode > 0)
+	  modifiers = 0;
+	  keysScanned = KS_ReadScanCode(scanCodeBuffer, scanCodeBufferSize, &modifiers);
+	  if(keysScanned > 0 || modifiers != 0)
 	  {
-		  printf("Key: 0x%02X\n", scanCode);
-		  switch(scanCode)
+		  switch(scanCodeBuffer[0])
 		  {
 			case 0x39:
 				capsLockState = !capsLockState;
@@ -138,15 +141,26 @@ int main(void)
 				break;
 		  }
 
-		  USB_Send_Key_Press(scanCode, 0);
+		  if (keysScanned > 0)
+		  {
+			  printf("Key: ");
+			  for(uint8_t i = 0; i < keysScanned; i++)
+			  {
+				  printf("0x%02X ", scanCodeBuffer[i]);
+			  }
+			  printf(" (modifier 0x%02X)\n", modifiers);
+			  USB_Send_Key_Press(scanCodeBuffer[0], modifiers);
+		  }
+		  else
+		  {
+			  USB_Send_Key_Press(0x00, modifiers);
+		  }
 		  HAL_Delay(10);
-		  USB_Send_All_Keys_Released();
-		  HAL_Delay(80);
+		  USB_Send_All_Keys_Released(0x00);
+		  HAL_Delay(100);
 	  }
 
-
   /* USER CODE BEGIN 3 */
-
   }
   /* USER CODE END 3 */
 

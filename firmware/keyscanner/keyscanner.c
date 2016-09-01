@@ -4,7 +4,9 @@
 #include "ibm-model-m-101.h"
 
 // private functions
-uint8_t KS_BitPositionToInteger(uint16_t iValue);
+uint16_t KS_ScanForKeyPress(uint8_t iActiveLine);
+uint8_t KS_IsModifier(uint16_t scanCode);
+void KS_UpdateModifiers(uint16_t scanCode, uint8_t* modifiers);
 void KS_GpioPinInit(GPIO_TypeDef *iPort, uint32_t iPin, uint32_t iMode, uint32_t iPull, uint32_t iSpeed);
 
 void KS_Init()
@@ -50,11 +52,8 @@ uint16_t KS_ScanForKeyPress(uint8_t iActiveLine)
 	return scannedInput;
 }
 
-void KS_FormatScanLines(uint8_t iActiveLine, uint16_t iReadLines)
-{
-}
-
-uint8_t KS_PrintScanLines()
+#ifdef DEBUG
+void KS_PrintScanLines()
 {
 	uint16_t scannedInput;
 	uint8_t keyScans = 0;
@@ -69,44 +68,72 @@ uint8_t KS_PrintScanLines()
 			++keyScans;
 		}
 	}
-
-	return keyScans;
 }
+#else
+void KS_PrintScanLines() {}
+#endif
 
-uint8_t KS_ReadScanCode()
+uint8_t KS_ReadScanCode(uint8_t* scanCodeBuffer, uint8_t bufferLength, uint8_t* modifiers)
 {
 	uint16_t scannedInput;
+	uint8_t keyStrokes = 0;
+	uint16_t scanCode;
 
 	for(uint8_t i = 0; i < 8; ++i)
 	{
 		scannedInput = KS_ScanForKeyPress(1 << (7 - i));
-		if (scannedInput > 0)
+		for(uint8_t j = 0; j < 16; j++)
 		{
-			// detected a key press
-			//decode
-			uint8_t readLine = KS_BitPositionToInteger(scannedInput);
-			if (KEY_MAP[i][readLine] > 0) {
-				return KEY_MAP[i][readLine];
+			// decode detected a key press(es)
+			if (((scannedInput >> j) & 0x0001) == 1)
+			{
+				scanCode = KEY_MAP[i][0x0F - j];
+				if (scanCode > 0)
+				{
+					if (KS_IsModifier(scanCode))
+					{
+						KS_UpdateModifiers(scanCode, modifiers);
+					}
+					else if (keyStrokes < bufferLength)
+					{
+						keyStrokes++;
+						scanCodeBuffer[keyStrokes - 1] = scanCode;
+					}
+				}
+				else
+				{
+					printf("No key-code found for scanned key: %i/%i (scanned input line was 0x%04X\n", i, (0x0F - j), scannedInput);
+				}
 			}
-			else {
-				printf("No key-code found for scanned key: %i/%i\n", i, readLine);
-			}
+//			scannedInput = scannedInput >> 1;
 		}
 	}
 
-	return 0;
+	return keyStrokes;
 }
 
-uint8_t KS_BitPositionToInteger(uint16_t value)
+uint8_t KS_IsModifier(uint16_t scanCode)
 {
-	for(uint8_t i = 0; i < 16; ++i)
+	switch(scanCode)
 	{
-		if ((value & 0x0001) == 1) return (0x0F - i);
-		value = value >> 1;
+		case 0xE0:
+		case 0xE1:
+		case 0xE2:
+		case 0xE3:
+		case 0xE4:
+		case 0xE5:
+		case 0xE6:
+		case 0xE7:
+			return 1==1;
+		default:
+			return 1==0;
 	}
-	return -1;
 }
 
+void KS_UpdateModifiers(uint16_t scanCode, uint8_t* modifiers)
+{
+	*modifiers |= 1 << (uint8_t)(0x000F & scanCode);
+}
 
 void KS_GpioPinInit(GPIO_TypeDef *iPort, uint32_t iPin, uint32_t iMode, uint32_t iPull, uint32_t iSpeed)
 {

@@ -97,7 +97,7 @@ static void USBD_SetFeature(USBD_HandleTypeDef *pdev ,
 static void USBD_ClrFeature(USBD_HandleTypeDef *pdev , 
                             USBD_SetupReqTypedef *req);
 
-static uint8_t USBD_GetLen(uint8_t *buf);
+static uint8_t USBD_GetLen(char *buf);
 
 /**
   * @}
@@ -185,8 +185,8 @@ USBD_StatusTypeDef  USBD_StdItfReq (USBD_HandleTypeDef *pdev , USBD_SetupReqType
       }
     } 
     else 
-    {                                               
-       USBD_CtlError(pdev , req);
+    {
+      USBD_CtlError(pdev , req);
     }
     break;
     
@@ -729,7 +729,7 @@ void USBD_CtlError( USBD_HandleTypeDef *pdev ,
   * @param  len : descriptor length
   * @retval None
   */
-void USBD_GetString(uint8_t *desc, uint8_t *unicode, uint16_t *len)
+void USBD_GetString(char *desc, uint8_t *unicode, uint16_t *len)
 {
   uint8_t idx = 0;
   
@@ -753,7 +753,7 @@ void USBD_GetString(uint8_t *desc, uint8_t *unicode, uint16_t *len)
    * @param  buf : pointer to the ascii string buffer
   * @retval string length
   */
-static uint8_t USBD_GetLen(uint8_t *buf)
+static uint8_t USBD_GetLen(char *buf)
 {
     uint8_t  len = 0;
 

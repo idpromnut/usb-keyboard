@@ -7,8 +7,8 @@
 
 void USB_Send_Key_Press(char c, uint8_t modifier);
 
-void USB_Send_Key_Release(char c);
+void USB_Send_Key_Release(char c, uint8_t modifier);
 
-void USB_Send_All_Keys_Released(void);
+void USB_Send_All_Keys_Released(uint8_t modifier);
 
 #endif

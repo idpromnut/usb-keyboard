@@ -1,0 +1,17 @@
+Name	Value	Bit Offset	Bit Length	Type	
+Status	USBD_STATUS_SUCCESS(0)			UsbdStatus	
+NtStatus	STATUS_SUCCESS(0)			NTSTATUS	
+LengthRequested	1			UInt32	
+LengthCompleted	1			UInt32	
+Direction	Out(0)			UsbDirection	
+Type	Control(0)			UsbTransferType	
+EndpointAddress	0x00			Byte	
+DeviceInstance	13			Int32	
+UrbPtr	18446708891469253408			UInt64	
+SetupPacket	USB_SETUP_PACKET{bmRequestType=33,bRequest=9,wValue=512,wIndex=0,wLength=1}			UsbSpec.USB_SETUP_PACKET	
+bmRequestType	()			Byte	
+bRequest	()			Byte	
+wValue	()			UInt16	
+wIndex	()			UInt16	
+wLength	()			UInt16	
+TransferData				BinaryValue	
