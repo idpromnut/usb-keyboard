@@ -101,6 +101,8 @@ static uint8_t USBD_HID_DataIn(USBD_HandleTypeDef *pdev, uint8_t epnum);
 
 static uint8_t USBD_HID_DataOut(USBD_HandleTypeDef *pdev, uint8_t epnum);
 
+static uint8_t USBD_HID_EP0_RxReady(USBD_HandleTypeDef *pdev);
+
 /**
  * @}
  */
@@ -114,7 +116,7 @@ USBD_ClassTypeDef USBD_HID = {
 		USBD_HID_DeInit,
 		USBD_HID_Setup,
 		NULL, /*EP0_TxSent*/
-		NULL, /*EP0_RxReady*/
+		USBD_HID_EP0_RxReady, /*EP0_RxReady*/
 		USBD_HID_DataIn, /*DataIn*/
 		USBD_HID_DataOut, /*DataOut*/
 		NULL, /*SOF */
@@ -197,13 +199,13 @@ __ALIGN_BEGIN static uint8_t HID_KEYBOARD_ReportDesc[HID_KEYBOARD_REPORT_DESC_SI
 		0x05, 0x01, // USAGE_PAGE (Generic Desktop)
 		0x09, 0x06, // USAGE (Keyboard)
 		0xa1, 0x01, // COLLECTION (Application)
-		0x75, 0x01, //   REPORT_SIZE (1)
-		0x95, 0x08, //   REPORT_COUNT (8)
 		0x05, 0x07, //   USAGE_PAGE (Keyboard)(Key Codes)
 		0x19, 0xe0, //   USAGE_MINIMUM (Keyboard LeftControl)(224)
 		0x29, 0xe7, //   USAGE_MAXIMUM (Keyboard Right GUI)(231)
 		0x15, 0x00, //   LOGICAL_MINIMUM (0)
 		0x25, 0x01, //   LOGICAL_MAXIMUM (1)
+		0x75, 0x01, //   REPORT_SIZE (1)
+		0x95, 0x08, //   REPORT_COUNT (8)
 		0x81, 0x02, //   INPUT (Data,Var,Abs) ; Modifier byte
 		0x95, 0x01, //   REPORT_COUNT (1)
 		0x75, 0x08, //   REPORT_SIZE (8)
@@ -288,15 +290,14 @@ static uint8_t USBD_HID_DeInit(USBD_HandleTypeDef *pdev, uint8_t cfgidx) {
  */
 static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req) {
 
+	printf("USBD_HID_Setup: entry\r\n");
+
 	uint16_t len = 0;
 	uint8_t *pbuf = NULL;
 	USBD_HID_HandleTypeDef *hhid = (USBD_HID_HandleTypeDef*) pdev->pClassData;
 
-//	printf("usbd_hid::USBD_HID_Setup(): bmRequest==0x%02X\r\n", (req->bmRequest & USB_REQ_TYPE_MASK));
-
 	switch (req->bmRequest & USB_REQ_TYPE_MASK) {
 	case USB_REQ_TYPE_CLASS:
-//		printf("usbd_hid::USBD_HID_Setup(): bRequest==0x%02X\r\n", req->bRequest);
 		switch (req->bRequest) {
 
 		case HID_REQ_SET_PROTOCOL:
@@ -316,8 +317,21 @@ static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *re
 			break;
 
 	    case HID_REQ_SET_REPORT:
-//			printf("USB set report: 0x%04X\n", req->wValue);
-//			uint8_t set_request_idle_state = (uint8_t)(req->wValue >> 8);
+
+	    	printf("HID_REQ_SET_REPORT: entry\r\n");
+	    	// todo: check for the type of set request to read more data
+			if (req->wLength == 1)
+			{
+				USBD_CtlPrepareRx(pdev, &(hhid->ledState), 1);
+//				USBD_CtlSendStatus(pdev);
+//				uint8_t buf[10] = {0};
+//				printf("USBD_HID_Setup::HID_REQ_SET_REPORT: Data: ");
+//				for(uint8_t i = 0; i < req->wLength; i++)
+//				{
+//					printf("%02X ", buf[i]);
+//				}
+//				printf("\r\n");
+			}
 			break;
 
 		default:
@@ -338,7 +352,6 @@ static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *re
 			}
 
 			USBD_CtlSendData(pdev, pbuf, len);
-
 			break;
 
 		case USB_REQ_GET_INTERFACE:
@@ -433,9 +446,21 @@ static uint8_t USBD_HID_DataIn(USBD_HandleTypeDef *pdev, uint8_t epnum) {
  * @retval status
  */
 static uint8_t USBD_HID_DataOut(USBD_HandleTypeDef *pdev, uint8_t epnum) {
-	((USBD_HID_HandleTypeDef *) pdev->pClassData)->state = HID_IDLE;
+
+    ((USBD_HID_HandleTypeDef *) pdev->pClassData)->state = HID_IDLE;
 	return USBD_OK;
 }
+
+
+static uint8_t USBD_HID_EP0_RxReady(USBD_HandleTypeDef *pdev) {
+
+	printf("USBD_HID_EP0_RxReady(): enter (%02X)\r\n", USBD_GetRxCount(pdev, 0));
+	USBD_HID_HandleTypeDef *hhid = (USBD_HID_HandleTypeDef*) pdev->pClassData;
+	printf("USBD_HID_EP0_RxReady(): ledState=%02X\r\n", hhid->ledState);
+	pdev->ep_out[0].rem_length = 0;
+	return USBD_OK;
+}
+
 
 /**
  * @brief  DeviceQualifierDescriptor

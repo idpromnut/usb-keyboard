@@ -148,11 +148,11 @@
 typedef  struct  usb_setup_req 
 {
     
-    uint8_t   bmRequest;                      
-    uint8_t   bRequest;                           
-    uint16_t  wValue;                             
-    uint16_t  wIndex;                             
-    uint16_t  wLength;                            
+    uint8_t   bmRequest;
+    uint8_t   bRequest;
+    uint16_t  wValue;
+    uint16_t  wIndex;
+    uint16_t  wLength;
 }USBD_SetupReqTypedef;
 
 struct _USBD_HandleTypeDef;

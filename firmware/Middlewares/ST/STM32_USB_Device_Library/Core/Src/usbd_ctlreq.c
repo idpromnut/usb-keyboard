@@ -702,7 +702,6 @@ void USBD_ParseSetupRequest(USBD_SetupReqTypedef *req, uint8_t *pdata)
   req->wValue        = SWAPBYTE      (pdata +  2);
   req->wIndex        = SWAPBYTE      (pdata +  4);
   req->wLength       = SWAPBYTE      (pdata +  6);
-
 }
 
 /**

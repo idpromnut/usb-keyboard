@@ -263,12 +263,11 @@ USBD_StatusTypeDef USBD_ClrClassConfig(USBD_HandleTypeDef  *pdev, uint8_t cfgidx
 */
 USBD_StatusTypeDef USBD_LL_SetupStage(USBD_HandleTypeDef *pdev, uint8_t *psetup)
 {
-
   USBD_ParseSetupRequest(&pdev->request, psetup);
   
   pdev->ep0_state = USBD_EP0_SETUP;
   pdev->ep0_data_len = pdev->request.wLength;
-  
+
   switch (pdev->request.bmRequest & 0x1F) 
   {
   case USB_REQ_RECIPIENT_DEVICE:   
@@ -285,6 +284,7 @@ USBD_StatusTypeDef USBD_LL_SetupStage(USBD_HandleTypeDef *pdev, uint8_t *psetup)
     
   default:           
     USBD_LL_StallEP(pdev , pdev->request.bmRequest & 0x80);
+    printf("USBD_LL_SetupStage: ep0 stalled\r\n");
     break;
   }  
   return USBD_OK;  
@@ -300,17 +300,18 @@ USBD_StatusTypeDef USBD_LL_SetupStage(USBD_HandleTypeDef *pdev, uint8_t *psetup)
 USBD_StatusTypeDef USBD_LL_DataOutStage(USBD_HandleTypeDef *pdev , uint8_t epnum, uint8_t *pdata)
 {
   USBD_EndpointTypeDef    *pep;
-  
+
   if(epnum == 0) 
   {
     pep = &pdev->ep_out[0];
     
+//    printf("USBD_LL_DataOutStage: ep0_state=%04X  rem_length=%i  maxpacket=%i\r\n",
+//    		pdev->ep0_state, pep->rem_length, pep->maxpacket);
     if ( pdev->ep0_state == USBD_EP0_DATA_OUT)
     {
       if(pep->rem_length > pep->maxpacket)
       {
         pep->rem_length -=  pep->maxpacket;
-       
         USBD_CtlContinueRx (pdev, 
                             pdata,
                             MIN(pep->rem_length ,pep->maxpacket));
