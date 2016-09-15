@@ -305,8 +305,6 @@ USBD_StatusTypeDef USBD_LL_DataOutStage(USBD_HandleTypeDef *pdev , uint8_t epnum
   {
     pep = &pdev->ep_out[0];
     
-//    printf("USBD_LL_DataOutStage: ep0_state=%04X  rem_length=%i  maxpacket=%i\r\n",
-//    		pdev->ep0_state, pep->rem_length, pep->maxpacket);
     if ( pdev->ep0_state == USBD_EP0_DATA_OUT)
     {
       if(pep->rem_length > pep->maxpacket)

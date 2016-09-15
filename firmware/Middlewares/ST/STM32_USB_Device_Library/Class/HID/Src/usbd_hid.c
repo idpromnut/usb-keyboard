@@ -230,6 +230,8 @@ __ALIGN_BEGIN static uint8_t HID_KEYBOARD_ReportDesc[HID_KEYBOARD_REPORT_DESC_SI
 		0xc0 // END_COLLECTION
 		};
 
+USBD_HID_LedStateCallback LedStateCallback = NULL;
+
 /**
  * @}
  */
@@ -288,10 +290,8 @@ static uint8_t USBD_HID_DeInit(USBD_HandleTypeDef *pdev, uint8_t cfgidx) {
  * @param  req: usb requests
  * @retval status
  */
-static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req) {
-
-	printf("USBD_HID_Setup: entry\r\n");
-
+static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)
+{
 	uint16_t len = 0;
 	uint8_t *pbuf = NULL;
 	USBD_HID_HandleTypeDef *hhid = (USBD_HID_HandleTypeDef*) pdev->pClassData;
@@ -317,20 +317,10 @@ static uint8_t USBD_HID_Setup(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *re
 			break;
 
 	    case HID_REQ_SET_REPORT:
-
-	    	printf("HID_REQ_SET_REPORT: entry\r\n");
-	    	// todo: check for the type of set request to read more data
-			if (req->wLength == 1)
+	    	// check for the type of set request + length to read more data
+			if (req->wValue == 0x0200 && req->wLength == 1)
 			{
 				USBD_CtlPrepareRx(pdev, &(hhid->ledState), 1);
-//				USBD_CtlSendStatus(pdev);
-//				uint8_t buf[10] = {0};
-//				printf("USBD_HID_Setup::HID_REQ_SET_REPORT: Data: ");
-//				for(uint8_t i = 0; i < req->wLength; i++)
-//				{
-//					printf("%02X ", buf[i]);
-//				}
-//				printf("\r\n");
 			}
 			break;
 
@@ -452,11 +442,10 @@ static uint8_t USBD_HID_DataOut(USBD_HandleTypeDef *pdev, uint8_t epnum) {
 }
 
 
-static uint8_t USBD_HID_EP0_RxReady(USBD_HandleTypeDef *pdev) {
-
-	printf("USBD_HID_EP0_RxReady(): enter (%02X)\r\n", USBD_GetRxCount(pdev, 0));
+static uint8_t USBD_HID_EP0_RxReady(USBD_HandleTypeDef *pdev)
+{
 	USBD_HID_HandleTypeDef *hhid = (USBD_HID_HandleTypeDef*) pdev->pClassData;
-	printf("USBD_HID_EP0_RxReady(): ledState=%02X\r\n", hhid->ledState);
+	if (LedStateCallback != NULL) LedStateCallback(hhid->ledState);
 	pdev->ep_out[0].rem_length = 0;
 	return USBD_OK;
 }
@@ -473,6 +462,11 @@ static uint8_t *USBD_HID_GetDeviceQualifierDesc(uint16_t *length) {
 	return USBD_HID_DeviceQualifierDesc;
 }
 
+
+void USBD_HID_SetLedStateCallback( USBD_HID_LedStateCallback callback)
+{
+	LedStateCallback = callback;
+}
 /**
  * @}
  */

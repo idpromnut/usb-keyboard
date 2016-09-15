@@ -32,6 +32,7 @@
   */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
+#include "usbd_hid.h"
 #include "usb_device.h"
 #include "devicecontrol/uart.h"
 #include "devicecontrol/usb_ctrl.h"
@@ -61,6 +62,8 @@ static void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN 0 */
 
+void ledUpdateCallback(uint8_t ledState);
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -82,6 +85,10 @@ int main(void)
   MX_GPIO_Init();
   UART_Init();
   MX_USB_DEVICE_Init();
+
+  // setup the Led callback
+  USBD_HID_SetLedStateCallback(ledUpdateCallback);
+
   USB_Control_Init();
   USB_Control_Enable();
 
@@ -96,7 +103,6 @@ int main(void)
   printf("%s", VERSION_STRING);
 
   uint8_t keysScanned;
-  uint8_t capsLockState = 0, scrollLockState = 0, numLockState = 0;
   uint8_t scanCodeBufferSize = 8;
   uint8_t scanCodeBuffer[scanCodeBufferSize];
   uint8_t modifiers;
@@ -122,25 +128,6 @@ int main(void)
 	  keysScanned = KS_ReadScanCode(scanCodeBuffer, scanCodeBufferSize, &modifiers);
 	  if(keysScanned > 0 || modifiers != 0)
 	  {
-		  switch(scanCodeBuffer[0])
-		  {
-			case 0x39:
-				capsLockState = !capsLockState;
-				UserInterface_Led_Set(CAPS_LOCK, capsLockState);
-				HAL_Delay(100);
-				break;
-			case 0x53:
-				numLockState = !numLockState;
-				UserInterface_Led_Set(NUM_LOCK, numLockState);
-				HAL_Delay(100);
-				break;
-			case 0x47:
-				scrollLockState = !scrollLockState;
-				UserInterface_Led_Set(SCROLL_LOCK, scrollLockState);
-				HAL_Delay(100);
-				break;
-		  }
-
 		  if (keysScanned > 0)
 		  {
 			  printf("Key: ");
@@ -157,7 +144,7 @@ int main(void)
 		  }
 		  HAL_Delay(10);
 		  USB_Send_All_Keys_Released(0x00);
-		  HAL_Delay(100);
+		  HAL_Delay(40);
 	  }
 
   /* USER CODE BEGIN 3 */
@@ -222,6 +209,14 @@ void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void ledUpdateCallback(uint8_t ledState)
+{
+	UserInterface_Led_Set(NUM_LOCK, ledState & 0x01);
+	UserInterface_Led_Set(CAPS_LOCK, (ledState >> 1) & 0x01);
+	UserInterface_Led_Set(SCROLL_LOCK, (ledState >> 2) & 0x01);
+}
+
 
 /* USER CODE END 4 */
 

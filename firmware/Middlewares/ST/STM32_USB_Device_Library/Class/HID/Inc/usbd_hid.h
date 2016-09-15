@@ -99,6 +99,7 @@ USBD_HID_HandleTypeDef;
 /**
   * @}
   */ 
+typedef void (*USBD_HID_LedStateCallback)(uint8_t ledState);
 
 
 
@@ -116,6 +117,7 @@ USBD_HID_HandleTypeDef;
 
 extern USBD_ClassTypeDef  USBD_HID;
 #define USBD_HID_CLASS    &USBD_HID
+
 /**
   * @}
   */ 
@@ -123,6 +125,9 @@ extern USBD_ClassTypeDef  USBD_HID;
 /** @defgroup USB_CORE_Exported_Functions
   * @{
   */ 
+
+void USBD_HID_SetLedStateCallback( USBD_HID_LedStateCallback callback );
+
 uint8_t USBD_HID_SendReport (USBD_HandleTypeDef *pdev, 
                                  uint8_t *report,
                                  uint16_t len);
