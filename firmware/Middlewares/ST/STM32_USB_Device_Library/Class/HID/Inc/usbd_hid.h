@@ -50,7 +50,7 @@
   * @{
   */ 
 #define HID_EPIN_ADDR                 0x81
-#define HID_EPIN_SIZE                 0x40
+#define HID_EPIN_SIZE                 0x04
 
 #define USB_HID_CONFIG_DESC_SIZ       34
 #define USB_HID_DESC_SIZ              9
