@@ -48,7 +48,8 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+uint8_t refuseInput = 0;
+uint8_t keyRepeating = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,6 +63,12 @@ static void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN 0 */
 
+void setRefuseInput();
+void clearRefuseInput();
+int isRefuseInput();
+void setKeyRepeating();
+void clearKeyRepeating();
+int isKeyRepeating();
 void ledUpdateCallback(uint8_t ledState);
 
 /* USER CODE END 0 */
@@ -100,12 +107,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint8_t VERSION_STRING[] = "USB Keyboard Firmware v0.1\n";
 
+  const uint16_t KEY_DELAY = 100;
+  const uint16_t REPEAT_DELAY_INITIAL = 500;
+  const uint16_t REPEAT_DELAY = 30;
+
   printf("%s", VERSION_STRING);
 
   uint8_t keysScanned;
   uint8_t scanCodeBufferSize = 8;
   uint8_t scanCodeBuffer[scanCodeBufferSize];
+  uint8_t lastScanCode = 0;
   uint8_t modifiers;
+  uint8_t lastModifiers = 0;
+  uint16_t repeatDelay = KEY_DELAY;
 
   KS_Init();
   UserInterface_Init();
@@ -126,25 +140,75 @@ int main(void)
 	  HAL_Delay(10);
 	  modifiers = 0;
 	  keysScanned = KS_ReadScanCode(scanCodeBuffer, scanCodeBufferSize, &modifiers);
-	  if(keysScanned > 0 || modifiers != 0)
+
+	  // have the modifiers changed but the scan code stayed the same?
+	  if ((modifiers != lastModifiers) && (lastScanCode > 0) && (lastScanCode == scanCodeBuffer[0]))
 	  {
-		  if (keysScanned > 0)
+		  // stop accepting input until key(s) are released
+		  setRefuseInput();
+		  lastModifiers = modifiers;
+	  }
+	  else if(keysScanned > 0 || modifiers != 0)
+	  {
+		  HAL_Delay(repeatDelay);
+
+		  if ((keysScanned > 0) && (modifiers == lastModifiers))
 		  {
-			  printf("Key: ");
-			  for(uint8_t i = 0; i < keysScanned; i++)
+//			  printf("Key: ");
+//			  for(uint8_t i = 0; i < keysScanned; i++)
+//			  {
+//				  printf("0x%02X ", scanCodeBuffer[i]);
+//			  }
+//			  printf(" (modifier 0x%02X)\n", modifiers);
+
+			  if (!isRefuseInput())
 			  {
-				  printf("0x%02X ", scanCodeBuffer[i]);
+				  USB_Send_Key_Press(scanCodeBuffer[0], modifiers);
+				  // if the key is "repeating", reduce the time between repeats
+				  if (scanCodeBuffer[0] == lastScanCode)
+				  {
+					  if (isKeyRepeating())
+					  {
+						  repeatDelay = REPEAT_DELAY;
+					  }
+					  else {
+						  repeatDelay = REPEAT_DELAY_INITIAL;
+						  setKeyRepeating();
+					  }
+				  }
+				  else
+				  {
+					  repeatDelay = KEY_DELAY;
+					  clearKeyRepeating();
+				  }
+				  lastScanCode = scanCodeBuffer[0];
 			  }
-			  printf(" (modifier 0x%02X)\n", modifiers);
-			  USB_Send_Key_Press(scanCodeBuffer[0], modifiers);
+			  else if (scanCodeBuffer[0] != lastScanCode)
+			  {
+				  clearRefuseInput();
+				  clearKeyRepeating();
+			  }
 		  }
 		  else
 		  {
 			  USB_Send_Key_Press(0x00, modifiers);
 		  }
-		  HAL_Delay(10);
-		  USB_Send_All_Keys_Released(0x00);
-		  HAL_Delay(40);
+
+		  if (!isRefuseInput())
+		  {
+			  HAL_Delay(10);
+			  USB_Send_All_Keys_Released(0x00);
+		  }
+
+		  lastModifiers = modifiers;
+	  }
+	  else
+	  {
+		  clearRefuseInput();
+		  clearKeyRepeating();
+		  repeatDelay = KEY_DELAY;
+		  lastScanCode = 0;
+		  lastModifiers = 0;
 	  }
 
   /* USER CODE BEGIN 3 */
@@ -215,6 +279,30 @@ void ledUpdateCallback(uint8_t ledState)
 	UserInterface_Led_Set(NUM_LOCK, ledState & 0x01);
 	UserInterface_Led_Set(CAPS_LOCK, (ledState >> 1) & 0x01);
 	UserInterface_Led_Set(SCROLL_LOCK, (ledState >> 2) & 0x01);
+}
+
+void setRefuseInput() {
+	refuseInput = 1;
+}
+
+void clearRefuseInput() {
+	refuseInput = 0;
+}
+
+int isRefuseInput() {
+	return refuseInput == 1;
+}
+
+void setKeyRepeating() {
+	keyRepeating = 1;
+}
+
+void clearKeyRepeating() {
+	keyRepeating = 0;
+}
+
+int isKeyRepeating() {
+	return keyRepeating == 1;
 }
 
 
