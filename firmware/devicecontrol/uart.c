@@ -1,6 +1,9 @@
 
+#include "main.h"
 #include "uart.h"
 #include "stm32f1xx_hal.h"
+
+#define UART_BAUD_RATE	(DEBUG_BAUD_RATE)
 
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef huart1;
@@ -10,7 +13,7 @@ UART_HandleTypeDef huart1;
 void UART_Init(void)
 {
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 921600;
+  huart1.Init.BaudRate = UART_BAUD_RATE;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -24,4 +27,3 @@ void UART_SendChar( char ch )
 {
 	HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, 100);
 }
-

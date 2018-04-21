@@ -1,4 +1,3 @@
-
 #include "user_interface.h"
 #include "stm32f1xx_hal.h"
 

@@ -1,5 +1,3 @@
-
-
 #ifndef __USB_CTRL_H
 #define __USB_CTRL_H
 

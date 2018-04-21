@@ -6,6 +6,7 @@
  ********************************************************************************/
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
 #include "uart.h"
 
 /**
@@ -23,10 +24,6 @@ void PrintChar(char c)
 /** Maximum string size allowed (in bytes). */
 #define MAX_STRING_SIZE         100
 
-
-/** Required for proper compilation. */
-//struct _reent r = {0, (FILE *) 0, (FILE *) 1, (FILE *) 0};
-//struct _reent *_impure_ptr = &r;
 
 /**
  * @brief  Writes a character inside the given string. Returns 1.
@@ -249,6 +246,8 @@ signed int PutHexa(
 /* Global Functions ----------------------------------------------------------- */
 
 
+#ifdef DEBUG
+
 /**
  * @brief  Stores the result of a formatted string into another string. Format
  *         arguments are given in a va_list instance.
@@ -349,6 +348,13 @@ signed int vsnprintf(char *pStr, size_t length, const char *pFormat, va_list ap)
     return size;
 }
 
+#else
+
+signed int vsnprintf(char *pStr, size_t length, const char *pFormat, va_list ap)
+{
+}
+
+#endif
 
 /**
  * @brief  Stores the result of a formatted string into another string. Format
@@ -550,5 +556,3 @@ signed int fputs(const char *pStr, FILE *pStream)
 
     return num;
 }
-
-/* --------------------------------- End Of File ------------------------------ */
