@@ -3,8 +3,8 @@
  *
  *
  */
-#ifndef __IBM_MODEL_M_101_H
-#define __IBM_MODEL_M_101_H
+#ifndef __IBM_MODEL_M_101_H__
+#define __IBM_MODEL_M_101_H__
 
 uint16_t KEY_MAP[8][16] = {
 	/*	       Left  -     Right Dn    /  ?              N     Space B           RAlt                   */
@@ -35,4 +35,4 @@ uint16_t KEY_MAP[8][16] = {
 
 
 
-#endif
+#endif /* __IBM_MODEL_M_101_H__ */

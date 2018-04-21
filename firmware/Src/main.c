@@ -2,11 +2,11 @@
 #include "stm32f1xx_hal.h"
 #include "usbd_hid.h"
 #include "usb_device.h"
-#include "devicecontrol/uart.h"
-#include "devicecontrol/usb_ctrl.h"
-#include "devicecontrol/usb_keyboard.h"
-#include "devicecontrol/user_interface.h"
-#include "keyscanner/keyscanner.h"
+#include "uart.h"
+#include "usb_ctrl.h"
+#include "usb_keyboard.h"
+#include "user_interface.h"
+#include "keyscanner.h"
 
 /* Private variables ---------------------------------------------------------*/
 uint8_t refuseInput = 0;

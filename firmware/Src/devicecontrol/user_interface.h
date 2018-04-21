@@ -1,5 +1,5 @@
-#ifndef _USER_INTERFACE_H
-#define _USER_INTERFACE_H
+#ifndef __USER_INTERFACE_H__
+#define __USER_INTERFACE_H__
 
 #include "stm32f1xx.h"
 
@@ -26,4 +26,4 @@ void UserInterface_Led_All_Off();
 
 void UserInterface_Led_Set(UserInterface_LedType led, uint8_t state);
 
-#endif // _USER_INTERFACE_H
+#endif /* __USER_INTERFACE_H__ */
